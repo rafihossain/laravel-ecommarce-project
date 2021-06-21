@@ -3,7 +3,7 @@
 <p>
 •	Add and manage category, brand, product and order information.<br>
 •	Product add to cart, quantity update and delete cart product<br>
-•	logout, user, authentication and registration features.<br><br>
+•	logout, user, authentication and registration features.<br>
 •	Invoice view and download system<br>
 Technology Used:<br>
 	Laravel, PHP, MySQl, Html, Css, JavaScript, Bootstrap And Jquery.</p>
