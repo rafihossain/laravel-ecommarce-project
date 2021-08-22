@@ -320,7 +320,7 @@
 			<!---728x90--->
 			<div class="new-arrivals-w3agile">
 					<div class="container">
-						<h3 class="tittle1">Best Sellers</h3>
+						<h3 class="tittle1">Related Products</h3>
 						<div class="arrivals-grids">
 						@foreach($relatedProducts as $relatedProduct)
 							<div class="col-md-3 arrival-grid simpleCart_shelfItem">
@@ -347,8 +347,8 @@
 										<div class="starbox small ghosting"> </div>
 									</div>
 									<div class="women">
-										<h6><a href="{{ route('product-details', ['id'=>$relatedProduct->id,'name'=>$relatedProduct->product_name]) }}">{{ $relatedProduct->product_name }}</a></h6>
-										<p ><em class="item_price">{{ $relatedProduct->product_price }}</em></p>
+										<p><a href="{{ route('product-details', ['id'=>$relatedProduct->id,'name'=>$relatedProduct->product_name]) }}">{{ $relatedProduct->product_name }}</a></p>
+										<p ><em class="item_price">{{ $relatedProduct->product_price }} Tk</em></p>
 										<a href="{{ route('product-details', ['id'=>$relatedProduct->id,'name'=>$relatedProduct->product_name]) }}" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
 									</div>
 								</div>

@@ -406,5 +406,29 @@ if(typeof _bsa !== 'undefined' && _bsa) {
 					</div>
 				</div>
 			</div>
+
+			<script>
+			var inputElement = document.getElementById('email_address');
+			inputElement.onkeyup = function () {
+
+				var data = document.getElementById('email_address').value;
+				var xmlHttp = new XMLHttpRequest();
+				var serverPage = 'http://localhost/ProjectLaravel/bitm/public/ajax-email-check/'+ data;
+				xmlHttp.open('GET', serverPage);
+				xmlHttp.onreadystatechange = function () {
+					if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
+						document.getElementById('result').innerHTML = xmlHttp.responseText;
+						if(xmlHttp.responseText == 'Already Exits'){
+							document.getElementById('regBtn').disabled = true;
+						}else{
+							document.getElementById('regBtn').disabled = false;
+						}
+					}
+				}; 
+				xmlHttp.send(null);
+
+			};
+		</script>
+		
 	</body>
 </html>

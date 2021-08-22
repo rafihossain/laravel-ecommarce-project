@@ -33,7 +33,8 @@
 									</div>
 									<div class="form-group">
 										<label for="">Email Address</label>
-										<input type="email" class="form-control" name="email_address" placeholder="example@gmail.com">
+										<input type="email" class="form-control" id="email_address" name="email_address" placeholder="example@gmail.com" autocomplete="off">
+										<span class="text-success" id="result"></span>
 									</div>
 									<div class="form-group">
 										<label for="">Password</label>
@@ -49,7 +50,7 @@
 									</div>
 									<div class="form-group">
 										<label for=""></label>
-										<input type="submit" name="btn" class="btn btn-info btn-block" value="Register">
+										<input type="submit" name="btn" id="regBtn" class="btn btn-info btn-block" value="Register">
 									</div>
 								{{ Form::close() }}
 							</div>

@@ -96,8 +96,8 @@
 							<div class="col-md-3 arrival-grid simpleCart_shelfItem">
 								<div class="grid-arr">
 									<div  class="grid-arrival">
-										<figure>		
-											<a href="{{ route('product-details', ['id'=>$newShopProduct->id,'name'=>$newShopProduct->product_name]) }}" class="new-gri">
+										<figure>	
+											<a href="{{ route('product-details', ['id'=>$newShopProduct->id,'name'=>$newShopProduct->product_name,]) }}" class="new-gri">
 												<div class="grid-img">
 													<img  src="{{ asset($newShopProduct->product_image) }}" class="img-responsive" alt="">
 												</div>

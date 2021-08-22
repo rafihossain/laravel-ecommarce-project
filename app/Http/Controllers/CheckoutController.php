@@ -190,4 +190,13 @@ class CheckoutController extends Controller
     public function completeOrder() {
         return view ('font-end.checkout.payment-success');
     }
+
+    public function ajaxEmailCheck($a) {
+        $customer = Customer::where('email_address', $a)->first();
+        if($customer){
+            echo "Already Exits";
+        }else{
+            echo "Available";
+        }
+    }
 }

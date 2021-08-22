@@ -12,7 +12,7 @@
 				<!---728x90--->
 
 				<div class="products-agileinfo">
-						<h2 class="tittle">Women's Wear</h2>
+						<h2 class="tittle">{{ $categoryName->category_name }}</h2>
 					<div class="container">
 						<div class="product-agileinfo-grids w3l">
 							<div class="col-md-3 product-agileinfo-grid">
@@ -227,7 +227,7 @@
 													<div class="grid-arr">
 														<div  class="grid-arrival">
 															<figure>		
-																<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
+																<a href="{{ route('product-details', ['id'=>$categoryProduct->id,'name'=>$categoryProduct->product_name]) }}" class="new-gri">
 																	<div class="grid-img">
 																		<img  src="{{ asset($categoryProduct->product_image) }}" class="img-responsive" alt="">
 																	</div>
@@ -241,9 +241,9 @@
 															<div class="starbox small ghosting"> </div>
 														</div>
 														<div class="women">
-															<h6><a href="single.html">{{ $categoryProduct->product_name }}</a></h6>
+															<p><a href="{{ route('product-details', ['id'=>$categoryProduct->id,'name'=>$categoryProduct->product_name]) }}">{{ $categoryProduct->product_name }}</a></p>
 															<p ><em class="item_price">{{ $categoryProduct->product_price }} TK </em></p>
-															<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+															<a href="{{ route('product-details', ['id'=>$categoryProduct->id,'name'=>$categoryProduct->product_name]) }}" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
 														</div>
 													</div>
 												</div>
@@ -258,7 +258,7 @@
 													<div class="grid-arr">
 														<div  class="grid-arrival">
 															<figure>		
-																<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
+																<a href="{{ route('product-details', ['id'=>$categoryProduct->id,'name'=>$categoryProduct->product_name]) }}" class="new-gri">
 																	<div class="grid-img">
 																		<img  src="{{ asset($categoryProduct->product_image) }}" class="img-responsive" alt="">
 																	</div>
@@ -275,10 +275,10 @@
 														<div class="starbox small ghosting"> </div>
 													</div>
 													<div class="women">
-														<h6><a href="single.html">{{ $categoryProduct->product_name }}</a></h6>
+														<p><a href="{{ route('product-details', ['id'=>$categoryProduct->id,'name'=>$categoryProduct->product_name]) }}">{{ $categoryProduct->product_name }}</a></p>
 														<p>{{ $categoryProduct->short_description }}</p>
 														<p ><em class="item_price">{{ $categoryProduct->product_price }} Tk </em></p>
-														<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+														<a href="{{ route('product-details', ['id'=>$categoryProduct->id,'name'=>$categoryProduct->product_name]) }}" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
 													</div>
 												</div>
 												<div class="clearfix"></div>

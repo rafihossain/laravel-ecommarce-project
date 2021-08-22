@@ -58,5 +58,6 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'newshop' => \App\Http\Middleware\NewShopMiddleware::class,
+        'newshopcustomer' => \App\Http\Middleware\FontEndMiddleware::class,
     ];
 }

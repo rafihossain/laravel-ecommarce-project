@@ -61,10 +61,15 @@ Route::post('/account/login', [
     'uses'  => 'CheckoutController@accountLogin',
     'as'    => 'account-login'
 ]);
+
+
 Route::get('/user/account', [
     'uses'  => 'CheckoutController@accountUser',
-    'as'    => 'user-account'
+    'as'    => 'user-account',
+    'middleware' => 'newshopcustomer'
 ]);
+
+
 
 Route::get('/account/register-info', [
     'uses'  => 'CheckoutController@accountRegisterInfo',
@@ -228,9 +233,17 @@ Route::group( ['middleware' => 'newshop'], function () {
         'uses'  => 'OrderController@downloadOrderInvoice',
         'as'    => 'download-order-invoice'
     ]);
-
-
+    
+    
 });
+
+Route::get('/ajax-email-check/{id}', [
+    'uses'  => 'CheckoutController@ajaxEmailCheck',
+    'as'    => 'ajax-email-check'
+]);
+
+
+
 
 
 
